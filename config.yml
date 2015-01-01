@@ -3,7 +3,7 @@ cache_dir: ~/tmp/battleschool
 
 sources:
   git: 
-    -name: 'linux-dev-battleschool'
-     repo: 'https://github.com/periclesmacedo/ansible-dev-linux'
-     playbooks:
-       - git.yml
+    - name: 'linux-dev-battleschool'
+      repo: 'https://github.com/periclesmacedo/ansible-dev-linux'
+      playbooks:
+        - git.yml
