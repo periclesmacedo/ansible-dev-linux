@@ -1,0 +1,35 @@
+---
+- host: workstation
+  
+  tasks: 
+    - name: 'set up rvm'
+      action: apt pkg=$item state=present
+      with_items:
+        - build-essential
+        - openssl
+        - libreadline6
+        - libreadline6-dev
+        - curl
+        - git-core
+        - zlib1g
+        - zlib1g-dev
+        - libssl-dev
+        - libyaml-dev
+        - libsqlite3-dev
+        - sqlite3
+        - libxml2-dev
+        - libxslt1-dev
+        - autoconf
+        - libc6-dev
+        - libncurses5-dev
+        - automake
+        - libtool
+        - bison
+      action: shell curl -L https://get.rvm.io | bash -s stable --rails --autolibs=enabled creates=~/.rvm/
+      action: shell echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function' >> ~/.bash_profile 
+      actoun: shell source ~/.bash_profile
+    - name: 'set up ruby'
+      action: shell rvm install 2.0.0
+      action: shell rvm install 2.1.0
+      action: shell rvm install 2.1.1
+      action: shell rvm install 2.1.2

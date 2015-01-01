@@ -7,3 +7,5 @@ sources:
       repo: 'https://github.com/periclesmacedo/ansible-dev-linux'
       playbooks:
         - git.yml
+        - rvm.yml
+        - chrome.yml
