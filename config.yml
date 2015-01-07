@@ -6,6 +6,6 @@ sources:
     - name: 'linux-dev-battleschool'
       repo: 'https://github.com/periclesmacedo/ansible-dev-linux'
       playbooks:
-        - git.yml
+        - dotfiles.yml
         - rvm.yml
         - chrome.yml

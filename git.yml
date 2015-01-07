@@ -1,7 +1,0 @@
----
--host: workstation
- 
- tasks:
-   - name: 'install git'
-     apt: name=git
-     sudo: yes
